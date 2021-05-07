@@ -63,6 +63,7 @@ Disregarding the “tbc win tbc” results, home teams (55%) have a 10% advantag
 ### Playoff Games: ###
 
 Disregarding the “tbc win tbc” results, home teams (52%) have approximately a 4% advantage over away teams (48%) during playoff games. Perhaps one explanation for this is that the teams in the playoffs are more competitive and less intimidated by the crowd. 
+
 ![](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/Playoffs%20Outcomes.jpg?raw=true)
  
 
