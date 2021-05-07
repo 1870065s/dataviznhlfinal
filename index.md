@@ -3,7 +3,10 @@
  ## Part One - Basic Analysis
 
 **Most Common Time zone:**
-
+'''
+  nhlnew %>% 
+    count(venue_time_zone_tz)
+'''
 It’s no surprise that 54% of NHL games take place in the eastern time zone considering that 16/31 NHL teams reside in the eastern time zone. Another interesting observation from this count is that while most games were recorded using time zones in either EDT/CDT/MDT/PDT, hockey traditionally takes place during the winter months which would use EST/CST/MST/PST. 
 
 **Over the past 20 years, on average, how may goals do the home/away teams score?**
