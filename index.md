@@ -1,6 +1,6 @@
-#NHL Game Data Analysis#
+# NHL Game Data Analysis
 
- ##Part One - Basic Analysis##
+ ## Part One - Basic Analysis
 
 **Most Common Time zone:**
 
