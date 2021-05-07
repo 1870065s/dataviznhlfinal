@@ -2,12 +2,11 @@
 
 
 ## Setup ##
-'''R
+
+'''
   library(tidyverse)
   library(lubridate)
-  
-  'Setup'
-  
+    
   nhl <- read_csv("game.csv")
   teams <- read_csv("team_info.csv")
   
@@ -19,6 +18,7 @@
     group_by(game_id) %>% 
     filter(row_number()==1) %>% 
     ungroup()
+    
 '''
 
 ## Part One - Basic Analysis
