@@ -47,7 +47,7 @@ The data here is legitimate because hockey is not a very high scoring game and I
     filter(type=="R") %>% 
     count(outcome)
   
-  'Playoff Outcomes'
+'Playoff Outcomes'
   nhlnew %>% 
     filter(type=="P") %>% 
     count(outcome)
