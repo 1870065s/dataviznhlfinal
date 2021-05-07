@@ -2,7 +2,7 @@
 
 
 ## Setup ##
-'''md
+'''R
   library(tidyverse)
   library(lubridate)
   
@@ -24,7 +24,7 @@
 ## Part One - Basic Analysis
 
 ### Most Common Time zone:
-'''md
+'''r
   nhlnew %>% 
     count(venue_time_zone_tz)
 '''
@@ -37,15 +37,15 @@ mean(nhlnew$away_goals)
 
 The data here is legitimate because hockey is not a very high scoring game and I know as a spectator it is unlikely to see a team score more than three goals. Analyzing this data fueled my next question around if there was a correlation between the home team scoring more and winning. 
 
-### Are Home or Away Teams More Likely to Win in the Regular Season or Playoffs Respectfully?**
+### Are Home or Away Teams More Likely to Win in the Regular Season or Playoffs Respectfully? ##
 
 Based on my analysis of the previous question, I was inspired to see if home teams won more games since they scored more often. Here are my findings:
 
-### Regular season:###
+### Regular season: ###
 
 Disregarding the “tbc win tbc” results, home teams (55%) have a 10% advantage over away teams (45%). Perhaps this can be attributed to having the crowd on your side or not having to deal with travel. 
 
-### Playoff Games:###
+### Playoff Games: ###
 
 Disregarding the “tbc win tbc” results, home teams (52%) have approximately a 4% advantage over away teams (48%) during playoff games. Perhaps one explanation for this is that the teams in the playoffs are more competitive and less intimidated by the crowd. 
 
