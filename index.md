@@ -22,7 +22,7 @@ ungroup()
 
 ## Part One - Basic Analysis
 
-### Most Common Time zone:
+### Most Common Time Zone:
 ```r
     nhlnew %>% 
     count(venue_time_zone_tz)
