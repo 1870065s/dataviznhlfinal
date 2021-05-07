@@ -28,9 +28,9 @@ ungroup()
     count(venue_time_zone_tz)
 ```
 It’s no surprise that 54% of NHL games take place in the eastern time zone considering that 16/31 NHL teams reside in the eastern time zone. Another interesting observation from this count is that while most games were recorded using time zones in either EDT/CDT/MDT/PDT, hockey traditionally takes place during the winter months which would use EST/CST/MST/PST. 
-![](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/Timezones.jpg?raw=true)
-![NHL Team Map Copyright Imugr](https://i.imgur.com/aIdbC.png)
 
+
+![](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/timezone2.png?raw=true)
 
 ### Over the Past 20 Years, on Average, How Many Goals do the Home/Away Teams Score?
 ```r
@@ -153,8 +153,8 @@ By examining the Number of away goals scored in each arena by opposing teams dur
 
 Back in 2011, the Atlanta Thrashers moved to Winnipeg and become the Winnipeg Jets. One of the main reasons for their move was due to Atlanta’s scarce fanbase. As I learned earlier in my analysis, having home ice and a crowd behind a team can influence the game outcome. Atlanta moved to Winnipeg to increase their winning percentage, but I wanted to know if they were able to do so. The data shows that there were but only by about 4% which is not a lot of hockey games. 
 
-![]https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/atlwin.jpg?raw=true
-https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/wpgwin.jpg?raw=true
+![Atlanta Outcome](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/atlwin.jpg?raw=true)
+![WPG Outcomes](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/wpgwin.jpg?raw=true)
 
 
 
@@ -172,9 +172,7 @@ nhlnew %>%
 ```
 Although hockey is played with 12 players (five players and one goaltender per side) at a time, the NHL has entertained the idea of reducing the number of players to reduce the number of overtime games. Reducing the number of players on the ice at one time to four would stimulate more scoring chances. Based on the chart, the NHL might want to consider this proposal as overtime games are at some of their highest levels since 2013. The reason why there are so many (300) OT games is because the data consists of all 82 games for 31 teams, resulting in about 2500+ games per year.
 
-![image](https://user-images.githubusercontent.com/83834681/117499390-2b5e3600-af49-11eb-9263-46ed018c8c51.png)
-
-
+![OT Outcomes](https://user-images.githubusercontent.com/83834681/117499390-2b5e3600-af49-11eb-9263-46ed018c8c51.png)
 
 
 ### Just for fun: The Total Number of Goals Scored by Year ###
