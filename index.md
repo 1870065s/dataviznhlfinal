@@ -176,19 +176,23 @@ Although hockey is played with 12 players (five players and one goaltender per s
 ![OT Outcomes](https://user-images.githubusercontent.com/83834681/117499390-2b5e3600-af49-11eb-9263-46ed018c8c51.png)
 
 
-### Just for fun: The Total Number of Goals Scored by Year ###
-```
-nhlnew %>% 
-     filter(year2 < 2019) %>% 
-     filter(outcome == "away win OT" | outcome == "home win OT") %>% 
-     count(year2) %>% 
-     ggplot(aes(year2,n,group = 1))+
-     geom_line()+
-     xlab("Year")+
-     ylab("OT Games")
-   
+### Just For Fun: The Total Number of Goals Scored by Year ###
+```   
+    nhlnew %>%
+      filter(year2 >=2011 & year2 <= 2019) %>% 
+      filter(type == "R" | type == "P") %>% 
+      group_by(year2,type) %>%
+      summarise(totgoals = sum(away_goals+home_goals)) %>% 
+      ggplot(aes(year2,totgoals,fill=type))+
+      geom_bar(stat = "identity")+
+      xlab("Year")+
+      ylab("Total Goals Scored")
+      
 ```
 ![Sum of all regular season and playoff goals](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/goalsum.jpg?raw=true)
+
+As illustrated in the plot above, regular season scoring has steadily increased every year. This is not a surprise seeing as the league has experienced an influx of offensively gifted players such as Connor McDavid, Leon Draisaitl, and Nathan MacKinnon who have some of the highest shot and scoring totals in the last decade. 
+
 
 
 
