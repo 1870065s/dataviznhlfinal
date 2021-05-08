@@ -193,7 +193,32 @@ Although hockey is played with 12 players (five players and one goaltender per s
 
 As illustrated in the plot above, regular season scoring has steadily increased every year. This is not a surprise seeing as the league has experienced an influx of offensively gifted players such as Connor McDavid, Leon Draisaitl, and Nathan MacKinnon who have some of the highest shot and scoring totals in the last decade. 
 
-
-
-
+### Just For Fun: Top 5 Teams Who Won the Most at Home During the Playoffs? ###
+```
+ homeplayoffwin = nhl %>% 
+    filter(type == "P") %>% 
+    filter(outcome == "home win REG"| outcome == "home win OT") %>% 
+    count(home_team_id) %>% 
+    arrange(desc(n))
+    print(homeplayoffwin)
+ 
+  hpwn=homeplayoffwin %>% 
+    full_join(teams,by = c("home_team_id"="team_id")) %>% 
+    select(abbreviation,n)
+  
+  print(top_n(hpwn,5))
+ 
+```
+### Just For Fun: Top 5 Teams Who Won the Most Away During the Playoffs? ###
+```
+ awayplayoffwin =  nhl %>% 
+    filter(type == "P") %>% 
+    filter(outcome == "away win REG"| outcome == "away win OT") %>% 
+    count(home_team_id) %>% 
+    arrange(desc(n))
+  apwn=awayplayoffwin %>% 
+    full_join(teams,by = c("home_team_id"="team_id")) %>% 
+    select(abbreviation,n)
+  print(top_n(apwn,5))
+```
 
