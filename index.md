@@ -189,7 +189,7 @@ Although hockey is played with 12 players (five players and one goaltender per s
       ylab("Total Goals Scored")
       
 ```
-![Sum of all regular season and playoff goals](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/goalsum.jpg?raw=true)
+![Sum of all regular season and playoff goals](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/goalsum2.jpg?raw=true)
 
 As illustrated in the plot above, regular season scoring has steadily increased every year. This is not a surprise seeing as the league has experienced an influx of offensively gifted players such as Connor McDavid, Leon Draisaitl, and Nathan MacKinnon who have some of the highest shot and scoring totals in the last decade. 
 
