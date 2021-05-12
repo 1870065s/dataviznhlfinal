@@ -161,7 +161,7 @@ Back in 2011, the Atlanta Thrashers moved to Winnipeg and became the Winnipeg Je
 
 ### Should the NHL Change the Number of Players Playing at One Time? (Overtime Game Count) ###
 
-```
+```r
 nhlnew %>% 
      filter(year2 < 2019) %>% 
      filter(outcome == "away win OT" | outcome == "home win OT") %>% 
@@ -171,13 +171,13 @@ nhlnew %>%
      xlab("Year")+
      ylab("OT Games")
 ```
-Although hockey is played with 12 players (five players and one goaltender per side) at a time, the NHL has entertained the idea of reducing the number of players to reduce the number of overtime games. Reducing the number of players on the ice at one time to four would stimulate more scoring chances. Based on the chart, the NHL might want to consider this proposal as overtime games are at some of their highest levels since 2013. The reason why there are so many (300) OT games is because the data consists of all 82 games for 31 teams, resulting in about 2500+ games per year.
+Although hockey is played with 12 players at a time (five players and one goaltender per side), the NHL has entertained the idea of reducing the number of players on the ice at any gven time to reduce the number of overtime games. Reducing the number of players on the ice at one time to four would generate more scoring chances. Based on the chart, the NHL might want to consider this proposal as overtime games are at some of their highest levels since 2013. The reason why there are so many OT games (300) is because the data consists of all 82 games for 31 teams, resulting in about 2500+ games per year.
 
 ![OT Outcomes](https://user-images.githubusercontent.com/83834681/117499390-2b5e3600-af49-11eb-9263-46ed018c8c51.png)
 
 
 ### Just For Fun: The Total Number of Goals Scored by Year ###
-```   
+```r   
     nhlnew %>%
       filter(year2 >=2011 & year2 <= 2019) %>% 
       filter(type == "R" | type == "P") %>% 
@@ -191,10 +191,10 @@ Although hockey is played with 12 players (five players and one goaltender per s
 ```
 ![Sum of all regular season and playoff goals](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/goalsum2.jpg?raw=true)
 
-As illustrated in the plot above, regular season scoring has steadily increased every year. This is not a surprise seeing as the league has experienced an influx of offensively gifted players such as Connor McDavid, Leon Draisaitl, and Nathan MacKinnon who have some of the highest shot and scoring totals in the last decade. 
+As illustrated in the plot above, regular season scoring has steadily increased every year. This is not surprising since the league has experienced an influx of offensively gifted players such as Connor McDavid, Leon Draisaitl, and Nathan MacKinnon who have some of the highest shot and scoring totals in the last decade. 
 
 ### Just For Fun: Top 5 Teams Who Won the Most at Home During the Playoffs? ###
-```
+```r
  homeplayoffwin = nhl %>% 
     filter(type == "P") %>% 
     filter(outcome == "home win REG"| outcome == "home win OT") %>% 
@@ -209,8 +209,10 @@ As illustrated in the plot above, regular season scoring has steadily increased 
   print(top_n(hpwn,5))
  
 ```
-### Just For Fun: Top 5 Teams Who Won the Most Away During the Playoffs? ###
-```
+![Top 5 Home Playoff Teams](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/top5homewin.jpg?raw=true)
+
+### Just For Fun: Top 5 Teams Who Won the Most While Away During the Playoffs? ###
+```r
  awayplayoffwin =  nhl %>% 
     filter(type == "P") %>% 
     filter(outcome == "away win REG"| outcome == "away win OT") %>% 
@@ -221,4 +223,5 @@ As illustrated in the plot above, regular season scoring has steadily increased 
     select(abbreviation,n)
   print(top_n(apwn,5))
 ```
+![Top 5 away playoff teams](https://github.com/1870065s/dataviznhlfinal/blob/main/graphs/top5homeaway.jpg?raw=true)
 
